@@ -38,7 +38,7 @@ class bird():
     def __init__(self):
         self.px = 200
         self.py = 200
-    def fly(self):
+    def plot(self):
         self.h = pygame.draw.rect(tela, vermelho, [self.px, self.py, 20, 20])
         tela.blit(p,self.h)
     def salto(self):
@@ -66,7 +66,7 @@ while not endgame:
                 passarinho.salto()
     tela.blit(fundo,(0,0))
     parede.pos(l)
-    passarinho.fly()
+    passarinho.plot()
     texto('placar: ' + str(pontos), (255, 255, 0), 50, largura - 200, 20)
     passarinho.py +=15
     l -= 25
